@@ -1,0 +1,70 @@
+.company-logo {
+    justify-content: center;
+    display: flex;
+    height: 90px;
+}
+
+.welcome-image {
+    left: 20%;
+    position: absolute;
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+.visitor-form {
+    width: 100%;
+    height: 180%;
+    background-color: rgb(206, 220, 224);
+}
+
+.container{    
+    max-width: 800px;
+    left: 20%;
+    position: absolute;
+    top:15%;
+    border: 1px solid black;
+    padding: 10px 70px 70px 70px;
+    background-color: white;
+}
+
+.signin-form {
+    width: 32rem;
+    margin-left: 5rem;
+    margin-top: 18rem;
+}
+
+.otp-body {
+    top: 60%;
+    width: 32rem;
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+.register-button {
+    background-color: rgb(9, 101, 240);
+    color: white;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.thanks-body {
+    font-size: 21px;
+    margin-left:48px;
+}
+
+.justify-text {
+    font-size: 21px;
+    margin-left: 12rem;
+}
+
+.send-text {
+    color: rgb(9, 101, 240);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    margin-left: 19.5rem;
+}
+
+.seconds {
+    margin-left: 20rem;
+}

@@ -6,17 +6,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VisitorComponent } from '../components/visitor/visitor.component';
 import { ThankyouComponent } from '../sharedModules/thankyou/thankyou.component';
-
+import { VisitorSignInComponent } from '../components/visitor-sign-in/visitor-sign-in.component';
+// import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
-  declarations: [VisitorComponent, ThankyouComponent],
+  declarations: [VisitorComponent, ThankyouComponent, VisitorSignInComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+   // NgxOtpInputModule
   ],
   providers: [],
   exports: [VisitorComponent],

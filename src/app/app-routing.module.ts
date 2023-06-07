@@ -5,6 +5,7 @@ import { GridComponent } from './components/grid/grid.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { VisitorComponent } from './components/visitor/visitor.component';
 import { ThankyouComponent } from './sharedModules/thankyou/thankyou.component';
+import { VisitorSignInComponent } from './components/visitor-sign-in/visitor-sign-in.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'thankyou',
     component: ThankyouComponent,
+  },
+  {
+    path: 'signin',
+    component: VisitorSignInComponent,
   },
   {
     path: '**',

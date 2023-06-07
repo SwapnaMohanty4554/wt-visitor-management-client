@@ -1,0 +1,47 @@
+<div class="visitor-form">
+    <div class="container">
+        <section class="company-logo">
+            <img src="./assets/images/Wissen-logo.png">
+        </section>
+        <section class="welcome-image">
+            <p class="welcome-text">Welcome back to our space!</p>
+        </section>
+        <section class="signin-form" *ngIf="!isSubmitted; else submitted">
+            <form [formGroup]="signInForm">
+                <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{
+                'is-invalid':
+                  (signInForm.controls.email.touched && signInForm.controls.email.errors) ||
+                  (signInForm.controls.email.untouched && isSubmitted),
+                'is-valid': signInForm.valid
+              }" placeholder="Enter your registered email address here..." />
+                <div *ngIf="
+          (signInForm.controls.email.touched && signInForm.controls.email.errors) ||
+          (signInForm.controls.email.untouched && isSubmitted)
+        " class="invalid-feedback">
+                    <div *ngIf="signInForm.controls.email.errors?.required">Email is required!</div>
+                    <div *ngIf="signInForm.controls.email.errors?.pattern">Enter Valid Email ID!</div>
+                </div>
+                <button class="btn register-button" [disabled]="signInForm.invalid" (click)="getOTP()">Get OTP</button>
+            </form>
+        </section>
+        <ng-template #submitted>
+            <section class="otp-body">
+                <p class="thanks-body">We have sent a 6 digit OTP to your regitsered</p>
+                <p class="justify-text">mobile number</p>
+                
+            </section>
+            <section class="otp-input">
+                <!-- <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+                </ngx-otp-input> -->
+            </section>
+            <section class="timer">
+                <p class="seconds">{{ secondsLeft }} sec</p>
+                <a class="send-text">Send Again</a>
+             </section>
+                
+            <section>
+                <button class="btn register-button">Enter</button>
+            </section>
+        </ng-template>
+    </div>
+</div>

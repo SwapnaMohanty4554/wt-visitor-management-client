@@ -17,4 +17,8 @@ export class VisitorComponent implements OnInit {
     this.router.navigate(['/add']);
   }
 
+  public goToSignin(): void {
+    this.router.navigate(['/signin']);
+  }
+
 }
