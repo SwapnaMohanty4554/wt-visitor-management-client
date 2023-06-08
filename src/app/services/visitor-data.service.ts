@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RowNode } from 'ag-grid-community';
 import { Observable, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class VisitorDataService {
 
   public getVisitersData(): Observable<any> {
     return this._http
-    .post('http://localhost:8080/api/visitor/fetch',
+    .post(`${environment.visitor_fetch_api_url}`,
       [
         {
             "dataType": "DATE",

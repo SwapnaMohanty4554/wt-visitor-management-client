@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
 import { RefdataService } from 'src/app/services/refdata.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-form',
@@ -118,7 +119,7 @@ export class FormComponent implements OnInit {
         );
       console.log(this.formGroup.value);
       this.http
-        .post('http://localhost:8080/api/visitor', this.formGroup.value)
+        .post(`${environment.visitor_api_url}`, this.formGroup.value)
         .subscribe(
           (resp: any) => {
             if (resp.responseStatus === 'SUCCESS') {

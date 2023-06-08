@@ -5,6 +5,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { RefdataService } from 'src/app/services/refdata.service';
 import { VisitorDataService } from 'src/app/services/visitor-data.service';
 import { refData } from 'src/app/services/visitor-dataTypes';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-filter',
@@ -139,7 +140,7 @@ export class FilterComponent implements OnInit {
   public searchWithFilter(params: any): void {
     this.showSpinner = true;
     this._http
-      .post('http://localhost:8080/api/visitor/fetch', params)
+      .post(`${environment.visitor_fetch_api_url}`, params)
       .subscribe((resp: any) => {
         if (resp.responseStatus === 'SUCCESS') {
           this.visitorData = resp.responseData;
