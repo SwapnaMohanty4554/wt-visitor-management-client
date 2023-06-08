@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormComponent } from '../form/form.component';
-import 'ag-grid-enterprise';
+// import 'ag-grid-enterprise';
 import { VisitorDataService } from 'src/app/services/visitor-data.service';
 import { refData, responseData, visitorTypesCount, visitorsDataType } from 'src/app/services/visitor-dataTypes';
 import { RefdataService } from 'src/app/services/refdata.service';

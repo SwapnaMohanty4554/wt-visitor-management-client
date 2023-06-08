@@ -3,7 +3,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { FormComponent } from '../form/form.component';
 import { RowNode } from 'ag-grid-community';
-import 'ag-grid-enterprise';
+// import 'ag-grid-enterprise';
 
 @Component({
   selector: 'app-grid',
